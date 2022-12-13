@@ -1,11 +1,9 @@
 package my_project.control;
 
 import KAGO_framework.control.ViewController;
-import KAGO_framework.model.abitur.datenstrukturen.Queue;
-import my_project.model.Ball;
-import my_project.view.InputManager;
-
-import java.awt.event.MouseEvent;
+import my_project.model.Balloon;
+import my_project.model.Cloud;
+import my_project.model.House;
 
 /**
  * Ein Objekt der Klasse ProgramController dient dazu das Programm zu steuern. Die updateProgram - Methode wird
@@ -30,14 +28,37 @@ public class ProgramController {
         this.viewController = viewController;
     }
 
+
+
     /**
      * Diese Methode wird genau ein mal nach Programmstart aufgerufen.
      * Sie erstellt die leeren Datenstrukturen, zu Beginn nur eine Queue
      */
     public void startProgram() {
         // Erstelle ein Objekt der Klasse Ball und lasse es zeichnen
-        Ball ball1 = new Ball(150,150);
-        viewController.draw(ball1);
+        //Ball ball1 = new Ball(150,150);
+        //viewController.draw(ball1);
+
+        House haus1 = new House();
+        viewController.draw(haus1);
+
+        House haus2 = new House();
+        viewController.draw(haus2);
+
+        Cloud c1 = new Cloud(100,200,30);
+        viewController.draw(c1);
+
+        Cloud c2 = new Cloud(400,150,40);
+        viewController.draw(c2);
+
+        Cloud c3 = new Cloud(50,60,70);
+        viewController.draw(c3);
+
+        Cloud c4 = new Cloud(250,200,50);
+        viewController.draw(c4);
+
+        Balloon b1 = new Balloon(150,300,15);
+        viewController.draw(b1);
 
     }
 
