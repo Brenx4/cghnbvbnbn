@@ -21,6 +21,10 @@ public class Cloud extends GraphicalObject{
         drawTool.drawFilledCircle(x+radius/2,y+radius/2,radius);
         drawTool.drawFilledCircle(x+radius,y,radius);
     }
+    public void update ( double dt ) {
+       // x = x + 50 * dt;
+        x = x + (Math.random() * 100) * dt;
+    }
 
 
 

@@ -19,17 +19,14 @@ public class Balloon extends GraphicalObject{
 
     public void draw(DrawTool drawTool) {
         drawTool.setCurrentColor(new Color(255, 255, 255));
-        drawTool.drawLine(150,420,154,300);
+        drawTool.drawLine(x,y+120,x+4,y);
         drawTool.setCurrentColor(new Color(248, 34, 34));
-        drawTool.drawFilledTriangle(150,300,145,320,160,320);
+        drawTool.drawFilledTriangle(x,y,x-5,y+20,x+10,y+20);
         drawTool.drawFilledCircle(x,y,radius);
+    }
 
-
-
-
-
-
-
-}}
-
-
+    public void update ( double dt ){
+        x = x + 50*dt;
+        y = y - (Math.random()*50)*dt;
+    }
+}
