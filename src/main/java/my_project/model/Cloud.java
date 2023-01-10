@@ -24,6 +24,9 @@ public class Cloud extends GraphicalObject{
     public void update ( double dt ) {
        // x = x + 50 * dt;
         x = x + (Math.random() * 100) * dt;
+        if(x>600){
+            x = -100;
+        }
     }
 
 

@@ -1,9 +1,7 @@
 package my_project.control;
 
 import KAGO_framework.control.ViewController;
-import my_project.model.Balloon;
-import my_project.model.Cloud;
-import my_project.model.House;
+import my_project.model.*;
 
 /**
  * Ein Objekt der Klasse ProgramController dient dazu das Programm zu steuern. Die updateProgram - Methode wird
@@ -59,6 +57,12 @@ public class ProgramController {
 
         Balloon b1 = new Balloon(150,300,15);
         viewController.draw(b1);
+
+        Christmastree ct1 = new Christmastree();
+        viewController.draw(ct1);
+
+        star s1 = new star();
+        viewController.draw(s1);
 
     }
 
